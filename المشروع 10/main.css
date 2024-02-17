@@ -1,0 +1,65 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(-90deg, rgb(130, 230, 255), rgb(255, 175, 212));
+}
+
+.ShareHint {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+}
+
+#InputToShare, #ShareBtn {
+    position: absolute;
+    right: calc(50% - 300px);
+    width: 590px;
+    border-radius: 10px;
+    border: 1px solid rgb(112, 112, 112);
+    text-align: center;
+    font-weight: bold;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 0;
+}
+
+#InputToShare {
+    top: 150px;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: -3px -3px 5px rgba(0, 0, 0) inset;
+    outline: none;
+}
+
+#ShareBtn {
+    top: 230px;
+    width: 602px;
+    height: 70px;
+    font-size: 30px;
+    color: #fff;
+    box-shadow: 6px 6px 5px rgba(255, 255, 255) inset,
+                -6px -6px 20px rgba(255, 255, 255) inset,
+                0px 0px 5px rgba(0, 0, 0);
+    background-color: red;
+    cursor: pointer;
+}
+
+@media (max-width: 680px) {
+    #ShareBtn, #InputToShare {
+        width: 80%;
+        right: 10%;
+    }
+
+    #ShareBtn {
+        width: calc(80% + 12px);
+    }
+
+    #InputToShare {
+        font-size: 16px;
+    }
+}

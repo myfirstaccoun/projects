@@ -1,0 +1,295 @@
+.main-content {
+    position: fixed;
+    left: 0;
+    top: 46px;
+    width: calc(100% - var(--side-width));
+    height: calc(100vh - 46px);
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+/* الصورة */
+.main-content .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--main-cover-height);
+    overflow: hidden;
+    user-select: none;
+    pointer-events: auto;
+}
+
+.main-content .cover img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.main-content .cover button, .main-content .cover .change-cover {
+    position: absolute;
+    bottom: 20px;
+    padding: 5px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(80, 80, 80);
+    box-shadow: 0 0 10px #000;
+    cursor: pointer;
+}
+
+.main-content .cover .change-cover input[type="file"], .main-content .content .page-icon input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.main-content .cover .delete-cover {
+    left: 30px;
+}
+
+.main-content .cover .change-cover {
+    left: 130px;
+}
+
+.main-content .cover .change-position {
+    left: 220px;
+}
+
+/* المحتوى الثابت */
+.main-content .content {
+    position: absolute;
+    top: var(--main-cover-height);
+    right: 0;
+    width: calc(100% - 100px);
+    min-height: calc(100% - var(--main-cover-height) - var(--main-content-padding) - 220px);
+    padding-top: var(--main-content-padding);
+    padding-right: 100px;
+    padding-bottom: 400px;
+}
+/* إضافة أيقونة وصورة */
+.main-content .content .add-icon-cover {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: calc(100% - 10px);
+    height: 30px;
+    color: rgb(80, 80, 80);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.main-content .content .add-icon-cover:hover {
+    opacity: 1;
+}
+
+.main-content .content .add-icon-cover div {
+    position: relative;
+    margin-left: 30px;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 7px;
+    padding: 0px 3px;
+    overflow: hidden;
+}
+
+.main-content .content .add-icon-cover div input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    padding-top: 100px;
+}
+
+.main-content .content .add-icon-cover div:hover {
+    background-color: rgb(55 53 47 / 10%);
+}
+
+.main-content .content .add-icon-cover div * {
+    position: relative;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+.main-content .content .add-icon-cover img {
+    bottom: 15px;
+    margin-left: 3px;
+    z-index: 1;
+}
+
+.main-content .content .add-icon-cover div, .main-content .content .add-icon-cover h3 {
+    display: inline-block;
+}
+
+.main-content .content .add-icon-cover .add-icon img, .main-content .content .add-icon-cover .add-cover img {
+    width: 20px;
+}
+/* ------------------ */
+
+
+.main-content .content .page-box {
+    position: absolute;
+    top: -64px;
+    display: inline-block;
+    width: 134px;
+    height: 134px;
+    padding: 3px;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.main-content .content .page-box:hover {
+    background-color: rgb(55 53 47 / 10%);
+}
+
+.main-content .content .page-box * {
+    position: absolute;
+}
+
+.main-content .content .page-box img {
+    width: 128px;
+    top: calc(50% - 64px);
+    right: calc(50% - 64px);
+}
+
+.main-content .content input.page-name-input {
+    position: relative;
+    border: 0;
+    outline: none;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 60px;
+    padding: 0;
+    width: calc(100% - 100px);
+    background-color: transparent;
+}
+
+/* المحتوى المتغير */
+
+.main-content .content .block-main {
+    position: relative;
+    width: calc(100% - 50px);
+    min-height: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.main-content .content .block-main.selected {
+    background-color: rgba(189, 230, 244, 0.8);
+}
+
+.main-content .content .block-main.add-main {
+    height: 10px;
+}
+
+.main-content .content textarea.block {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    resize: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: transparent;
+    scrollbar-width: none;
+}
+
+.main-content .content .block-main.add-main textarea {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.main-content::-webkit-scrollbar, .main-content .content textarea.block::-webkit-scrollbar {
+    width: 0rem;
+}
+
+.main-content .content .all-blocks {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    display: inline-block;
+    padding-right: 0;
+    padding-left: 0;
+    max-height: 150px;
+    overflow: auto;
+}
+
+.main-content .content .all-blocks .block-in-list {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+}
+
+.main-content .content .all-blocks .block-in-list:hover {
+    background-color: rgb(55, 53, 47, 0.08);
+}
+
+.main-content .content .all-blocks .block-in-list:active {
+    background-color: rgb(55, 53, 47, 0.15);
+}
+
+.main-content .content .all-blocks .block-in-list h1 {
+    position: absolute;
+    font-size: 20px;
+    top: 10px;
+    right: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+/* اللبنات */
+.main-content .content .block-main.h1 {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.main-content .content .block-main.h2 {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.main-content .content .block-main.h3 {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.main-content .content .block-main.h1 textarea,
+.main-content .content .block-main.h2 textarea,
+.main-content .content .block-main.h3 textarea {
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.main-content .content .block-main.h1 textarea {
+    font-size: 35px;
+}
+
+.main-content .content .block-main.h2 textarea {
+    font-size: 30px;
+}
+
+.main-content .content .block-main.h3 textarea {
+    font-size: 25px;
+}

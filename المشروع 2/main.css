@@ -1,0 +1,408 @@
+* {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(0, 63, 163);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.divbtns {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 53.3%;
+    border-radius: 10px;
+    border-width: 10px;
+    border: 3px solid white;
+    padding: 10px;
+}
+ 
+.divbtns-scroll {
+    overflow-y: scroll;
+}
+
+.divbtns .thebtn {
+    width: 100%;
+    height: 14.5%;
+    border: 0;
+    background-color: rgb(123, 174, 255);
+    border-radius: 10px;
+    display: block;
+    position: relative;
+    border-bottom: 3px solid white;
+    margin-bottom: 20px;
+}
+
+.divbtns .margin-none {
+    margin-bottom: 0 !important;
+}
+
+.divbtns .thebtn .delete {
+    position: absolute;
+    right: 3%;
+    top: 27%;
+    cursor: pointer;
+}
+
+.divbtns .thebtn .star {
+    position: absolute;
+    top: 27%;
+    left: 4%;
+    cursor: pointer;
+}
+
+.divbtns .thebtn .imgs {
+    padding: 10px;
+    width: 4%;
+    height: 45%;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    bottom: 50px;
+    right: 10px;
+}
+
+.divbtns .thebtn .imgs:hover {
+background-color: rgba(161, 161, 161, 0.329);
+}
+
+::-webkit-scrollbar {
+    width: 1.1rem;
+}
+  
+::-webkit-scrollbar-track {
+    border: 7px solid #232943;
+    box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #9e4673, #3d4a59);
+    border-radius: 1rem;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(270deg, #9e4673, #3d4a59, #9e4673);
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    --inputs-w: 300px;
+    --w: calc((100% - var(--inputs-w)) / 2);
+}
+
+
+.inputs {
+    position: fixed;
+    right: var(--w);
+    bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    width: var(--inputs-w);
+    justify-content: center;
+    align-items: center;
+}
+
+.inputs h1 {
+    position: relative;
+    right: 40px;
+    bottom: 10px;
+    color: white;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inputs button {
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 100%;
+    background-color: rgb(167, 220, 255);
+    border: none;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.inputs button:hover {
+    box-shadow: 0px 0px 10px 5px rgb(167 220 255 / 50%);
+}
+
+.inputs input {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+    border: 0;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 100%;
+    outline: none;
+}
+
+.none {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 100px;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.delsure , dialog {
+    z-index: 20;
+}
+
+.delsure {
+    background-color: rgb(255, 206, 206);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.delsure div {
+    position: relative;
+    top: 5%;
+    right: 5%;
+    margin: auto;
+    align-items: center;
+    width: 30%;
+    height: 150px;
+    background-color: white;
+    border: 0;
+    border-radius: 10px;
+}
+
+.delsure div button {
+    position: relative;
+    top: 7%;
+    right: 15%;
+    width: 30%;
+    height: 41px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 150%;
+    transition: 1s;
+}
+
+.delsure div .yes {
+    background-color: rgb(0 , 255 , 0);
+}
+
+.delsure div .no {
+    background-color: rgb(255 , 0 , 0);
+}
+
+.delsure div .yes:hover {
+    box-shadow: 0px 0px 10px 5px rgb(0 255 0 / 50%);
+}
+
+.delsure div .no:hover {
+    box-shadow: 0px 0px 10px 5px rgb(255 0 0 / 50%);
+}
+
+.delsure p {
+    position: relative;
+    top: 10%;
+    font-size: 30px;
+}
+
+.delsure .delsurediv p {
+    position: relative;
+    top: 10%;
+    font-size: 30px;
+}
+
+.editpagediv {
+    height: 200px !important;
+}
+
+.editpagediv input {
+    position: relative;
+    right: 18%;
+    display: block;
+    text-align: center;
+    width: 60%;
+    height: 20px;
+    margin-top: 45px;
+    margin-bottom: 10px;
+    border: 3px solid blue;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.editpagediv input:focus {
+    border-color: rgb(0, 255, 0);
+    width: 80%;
+    right: 9%;
+    outline: none;
+}
+
+.editpagediv .editbtn {
+    background-color: rgb(182, 182, 255);
+}
+
+.editpagediv .editbtn:hover {
+    box-shadow: 0px 0px 10px 5px rgb(0 0 192 / 50%);
+}
+
+.edit {
+    position: absolute;
+    right: 8%;
+    top: 27%;
+    cursor: pointer;
+}
+
+.divbtns .thebtn p {
+    display: flex;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow-wrap: break-word;
+}
+
+p {
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1440px) {
+    
+    .editpagediv , .delsurediv {
+        position: absolute!important;
+        right: 10%!important;
+        width: 80% !important;
+    }
+
+    .editpagediv p {
+        position: absolute!important;
+        top: -5%!important;
+    }
+
+    .delsurediv p {
+        position: absolute!important;
+        top: -5%!important;
+    }
+
+    .editpagediv input {
+        position: absolute;
+        bottom: 5%;
+    }
+
+    .editpagediv button {
+        top: 45%!important;
+    }
+
+    .delsurediv button {
+        top: 60%!important;
+    }
+
+}
+
+@media (max-width: 820px) {
+    .edit {
+        right: 12%;
+    }
+}
+
+@media (max-height: 570px) {
+    .thebtn p {
+        position: absolute;
+        top: -10%;
+    }
+}
+
+@media (max-width: 560px) {
+    .divbtns {
+        right: 4%;
+        width: 87%;
+    }
+}
+
+@media (max-width: 515px) {
+
+}
+
+@media (max-width: 455px) {
+    .edit {
+        right: 15%;
+    }
+}
+
+@media (max-width: 430px) {
+    .divbtns {
+        width: 70%;
+        right: 11%;
+    }
+
+    .thebtn img {
+        width: 20px;
+    }
+}
+
+@media (max-width: 419px) {
+    .editpagediv p {
+        right: 15%!important;
+    }
+}
+
+@media (max-width: 380px) {
+    .delsurediv p {
+        right: 15%!important;
+    }
+}
+
+@media (max-width: 346px) {
+    .editpagediv p {
+        right: 17%;
+        font-size: 25px;
+    }
+}

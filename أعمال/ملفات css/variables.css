@@ -1,0 +1,15 @@
+:root {
+    /* sidebar */
+    --side-width: 222px;
+
+
+
+    /* infobar */
+    --info-pagename-text-width: 33px;
+
+
+
+    /* mainContent */
+    --main-cover-height: 200px;
+    --main-content-padding: 100px;
+}

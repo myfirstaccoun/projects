@@ -1,0 +1,223 @@
+* {
+    font-family: sans-serif;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+
+
+
+
+
+
+/* المتغيرات */
+:root {
+    --w-and-h: 200px;
+}
+/* نهاية المتغيرات */
+
+
+
+
+
+
+/* الكل */
+.keysform {
+    margin-top: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px;
+    padding: 20px;
+    border-radius: 35px;
+    background-color: rgb(255, 210, 128);
+    box-shadow: 0 0 10px rgb(146, 146, 146);
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.keysform.margtop {
+    margin-top: 0%;
+    transition: all 0s;
+}
+/* نهاية الكل */
+
+
+
+
+
+
+
+
+
+/* إضغط على أي مفتاح */
+.any {
+    width: 100%;
+    text-align: center;
+}
+/* نهاية */
+
+
+
+
+
+
+
+
+
+/* الجميع ماعدا ادخل مفتاح */
+.allinform {
+    display: none;
+}
+/* نهاية */
+
+
+
+
+
+
+
+
+
+/* الدائرة */
+.circleofnum {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+    border: 5px solid rgb(60, 255, 102);
+    width: var(--w-and-h);
+    height: var(--w-and-h);
+}
+
+.circleofnum .code {
+    position: absolute;
+    width: 100%;
+    top: -20px;
+    right: 0;
+    text-align: center;
+    font-size: 500%;
+    transition: all 0s;
+}
+/* نهاية الدائرة */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* المعلومات */
+.details {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Names , .Codes {
+    align-items: center;
+    justify-content: center;
+    grid-row: 1/2;
+}
+
+.Names {
+    grid-column: 1/2;
+}
+
+.Codes {
+    grid-column: 2/3;
+}
+
+.item {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.key {
+    font-size: 40px;
+}
+/* نهاية المعلومات */
+
+
+
+
+
+
+
+
+
+
+
+/* الشاشات */
+@media (max-width: 610px) {
+
+    .keysform {
+        width: 80%;
+    }
+
+    .pressany {
+        width: 100%;
+        right: 0px!important;
+    }
+
+    .keynameh {
+        right: 200px;
+    }
+
+    .keyName {
+        right: 230px;
+    }
+}
+
+@media (max-width: 580px) {
+    .keynameh {
+        right: 170px;
+    }
+
+    .keyName {
+        right: 200px;
+    }
+}
+
+@media (max-width: 530px) {
+    .keynameh {
+        right: 140px;
+    }
+
+    .keyName {
+        right: 170px;
+    }
+}
+
+@media (max-width: 485px) {
+    .keynameh {
+        right: 100px;
+    }
+
+    .keyName {
+        right: 140px;
+    }
+
+    /* .circleofnum {
+        right: 70px;
+    } */
+}
+
+@media (max-width: 450px) {
+    .keynameh {
+        right: 80px;
+    }
+
+    .keyName {
+        right: 110px;
+        font-size: 30px!important;
+    }
+}
+/* النهاية */

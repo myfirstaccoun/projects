@@ -1,0 +1,241 @@
+::-webkit-scrollbar {
+    width: 1.1rem;
+}
+   
+::-webkit-scrollbar-track {
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #fff, #8d8d8d);
+    border-radius: 1rem;
+}
+
+html {scrollbar-color: #fff #8d8d8d;}
+
+
+
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #ffd3ab;
+}
+
+button {
+    cursor: pointer;
+}
+
+.sebha {
+    position: fixed;
+    width: 300px;
+    height: 350px;
+    top: 150px;
+    right: calc(50% - 150px);
+    z-index: 1;
+}
+
+.sebha * {
+    position: absolute;
+}
+
+.sebha button {
+    z-index: 2;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 30%);
+    background-image: linear-gradient(rgb(224, 224, 224), rgb(255, 255, 255));
+}
+
+.sebha .num {
+    width: 100%;
+    height: 60%;
+    border-radius: 50%;
+    background-image: linear-gradient(red, rgb(255 111 0));
+    z-index: 4;
+}
+
+.sebha .num h1 {
+    top: 50px;
+    width: 70%;
+    height: 50px;
+    right: calc(50% - (35% + 5px));
+    background-color: #fff;
+    border-radius: 10px;
+    padding-right: 10px;
+}
+
+.sebha .btns {
+    top: 100px;
+    width: 84%;
+    right: calc(50% - 42%);
+    height: 70%;
+    background-image: linear-gradient(red, yellow);
+    border-radius: 10%;
+}
+
+.sebha .btns button {
+    z-index: 5;
+}
+
+.sebha .btns button:active {
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(224, 224, 224));
+    box-shadow: 0px 0px 30px rgb(255, 255, 255);
+}
+
+.add {
+    top: 90px;
+    width: 120px;
+    height: 120px;
+    right: calc(50% - 60px);
+    border: 0;
+    border-radius: 50%;
+}
+
+.reset {
+    top: 80px;
+    width: 40px;
+    height: 40px;
+    right: 25px;
+    border: 0;
+    border-radius: 50%;
+}
+
+
+
+.menubtn {
+    position: fixed;
+    top: 60px;
+    border: 0;
+    background-color: transparent;
+    z-index: 100;
+}
+
+.black {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 30%);
+    width: 100%;
+    height: 100vh;
+}
+
+/* قائمة الأذكار */
+
+
+.menu {
+    position: relative;
+    width: 340px;
+    padding: 10px 0px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: inline-block;
+    overflow: auto;
+    max-height: 300px;
+    z-index: 100;
+}
+
+.menu button {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border: 0;
+    background-color: transparent;
+}
+
+.menu button:hover {
+    background-color: rgba(0, 0, 0, 10%);
+}
+
+.menu button {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu .Zekr h1 {
+    margin: 0;
+}
+
+.menu .Zekr .name {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    width: fit-content;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu .Zekr .count {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: fit-content;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu .Azkar {
+    overflow: auto;
+    z-index: 7;
+}
+
+.addmenu {
+    position: fixed;
+    width: 80%;
+    height: 160px;
+    background-color: #fff;
+    border-radius: 15px;
+    z-index: 100;
+    top: 200px;
+    right: 10%;
+    box-shadow: 0px 0px 30px;
+}
+
+.addmenu h1 {
+    text-align: center;
+}
+
+.addmenu input {
+    position: relative;
+    border: 1px solid;
+    width: 80%;
+    height: 20px;
+    border-radius: 15px;
+    right: 10%;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+}
+
+.addmenu button {
+    position: absolute;
+    width: 50%;
+    right: 25%;
+    bottom: 10px;
+    display: block;
+    border-radius: 15px;
+    border: 1px solid;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu .Zekr .delete {
+    width: 32px;
+}
+
+/* الشاشات */
+
+@media (max-width: 768px) {
+    .menu {
+        right: 80px;
+        bottom: 70px;
+        width: calc(100% - 80px);
+    }
+}
+
+@media (max-width: 500px) {
+    .menu {
+        top: 20px;
+        right: 0px;
+        width: 100%;
+    }
+}

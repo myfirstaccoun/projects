@@ -1,0 +1,31 @@
+body {
+    height:100%;
+    align-items: center;
+}
+
+.btns {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(204, 255, 153);
+    border-radius: 10px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.project:hover {
+    background-color: rgb(128, 255, 0);
+    width: 120px;
+    height: 120px;
+    box-shadow: 10px 20px 10px 0 rgb(186 186 186 / 47%);
+    font-weight: bold;
+    font-size: 20px;
+}

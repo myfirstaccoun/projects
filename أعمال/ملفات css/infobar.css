@@ -1,0 +1,106 @@
+.infobar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - var(--side-width));
+    height: 46px;
+    background-color: #fff;
+    transition: 0.2s width;
+}
+
+.infobar .page-box {
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.infobar .page-box, .infobar .page-box * {
+    cursor: pointer;
+}
+
+.infobar .page-box img {
+    width: 21px;
+    height: 21px;
+    top: calc(50% - 10.5px);
+    right: calc(50% - 10.5px);
+    border-radius: 6px;
+}
+
+.infobar .page-box label {
+    color: rgb(25 23 17 / 90%);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.infobar .show-hide {
+    position: absolute;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    top: 11px;
+    right: 12px;
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+.infobar .show-hide img {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: calc(50% - 7.5px);
+    right: calc(50% - 7.5px);
+    border-radius: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.infobar.showMenuBtn:hover .show-hide img {
+    opacity: 1;
+}
+
+.infobar.showMenuBtn > .page-name {
+    right: 50px;
+}
+
+.infobar.showMenuBtn .show-hide:hover, .infobar .page-name:hover {
+    cursor: pointer;
+    background-color: rgb(55 53 47 / 10%);
+}
+
+.infobar .pages-name {
+    position: absolute;
+    width: fit-content;
+    top: calc(50% - 12px);
+    right: 10px;
+}
+
+.infobar .page-name {
+    position: relative;
+    background-color: transparent;
+    height: 24px;
+    margin: 0;
+    border-radius: 3px;
+    padding-left: 13px;
+    display: inline-block;
+}
+
+.infobar .page-name * {
+    position: relative;
+}
+
+.infobar .page-name span {
+    font-weight: bold;
+    right: 5px;
+    bottom: 3px;
+}
+
+.infobar .page-name label {
+    width: auto;
+    top: calc(50% - 12px);
+    right: 30px;
+}
+
+
+.infobar .page-icon {
+    width: 21px;
+    right: 4px!important;
+}

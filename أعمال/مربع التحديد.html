@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="select-box"></div>
+
+    <style>
+        .select-box {
+            position: fixed;
+            background-color: rgba(153, 196, 238, 0.8);
+            border: 1px solid #0078d7;
+        }
+    </style>
+
+    <script>
+        let selectBox = document.querySelector(".select-box");
+        let isMouseDown = false; // هل ضغطت على الفأرة
+        let mx = ""; // مكان الفأرة عند الضغط على محور س
+        let my = ""; // مكان الفأرة عند الضغط على محور ص
+        
+        document.addEventListener("mousedown", (e) => {// عند الضغط بالفأرة
+            isMouseDown = true;
+            mx = e.pageX;
+            my = e.pageY;
+            
+            // تغيير مكان مربع التحديد
+            selectBox.style.top = JSON.stringify(e.pageY) + "px";
+            selectBox.style.left = JSON.stringify(e.pageX) + "px";
+            
+            document.addEventListener("mousemove", (e) => {// عندما تتحرك الفأرة
+                if(isMouseDown == true) {
+                    document.querySelector("*").style.userSelect = "none";
+                    if(e.pageX >= mx) {// التحكم في العرض
+                        selectBox.style.width = JSON.stringify(Math.abs(e.pageX - mx)) + "px";
+                    } else {
+                        selectBox.style.left = JSON.stringify(e.pageX) + "px";
+                        selectBox.style.width = JSON.stringify(Math.abs(e.pageX - mx)) + "px";
+                    }
+                    
+                    if(e.pageY >= my) {// التحكم في الإرتفاع
+                        selectBox.style.height = JSON.stringify(Math.abs(e.pageY - my)) + "px";
+                    } else {
+                        selectBox.style.top = JSON.stringify(e.pageY) + "px";
+                        selectBox.style.height = JSON.stringify(Math.abs(e.pageY - my)) + "px";
+                    }
+                  
+                    // إظهار مربع التحديد
+                    selectBox.style.display == "block"? "" : selectBox.style.display = "block";
+                }
+            });
+        });
+
+        document.addEventListener("mouseup", (e) => {// إخفاء مربع التحديد
+            document.querySelector("*").style.userSelect = "none";
+            selectBox.style.display = "none";
+            isMouseDown = false;
+        });
+    </script>
+</body>
+</html>

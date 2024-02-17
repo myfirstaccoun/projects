@@ -1,0 +1,28 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --hed-h: 80px;
+    --h: calc((100% - var(--hed-h)) / 2);
+}
+
+header {
+    width: 100%;
+    height: var(--hed-h);
+    background-color: rgb(255, 189, 113);
+    /* padding: 20px; */
+}
+
+header h1 {
+    position: relative;
+    display: inline;
+    right: 20px;
+    top: 12px;
+    color: white;
+}

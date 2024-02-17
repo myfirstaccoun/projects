@@ -1,0 +1,210 @@
+* {
+    font-family: sans-serif;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+button {
+    cursor: pointer;
+}
+
+.form {
+    user-select: none;
+}
+
+.form h1 {
+    position: absolute;
+    top: -50px;
+    font-size: 20px;
+}
+
+.title {
+    position: fixed;
+    font-family: sans-serif;
+    top: 30px;
+}
+
+.form {
+    margin: auto;
+    position: relative;
+    top: 100px;
+    width: 80%;
+    height: 500px;
+    background: #ebebeb;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.57);
+}
+
+.sec .cont {
+    position: absolute;
+    right: 10%;
+    width: 80%;
+    height: 50px;
+}
+
+.sec {
+    width: 100%;
+    position: absolute;
+}
+
+
+
+
+.sec.true {top: 50px;}
+.sec.false {bottom: 50px;}
+
+
+
+button.calc {
+    position: absolute;
+    right: 10%;
+    width: 80%;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    background: red;
+    color: #fff;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+button.calc:disabled {
+    background: #dddddd;
+    cursor: auto;
+}
+
+img {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 25px;
+}
+
+
+
+
+
+
+
+
+
+.true .cont .icon {background: #00CC00;}
+.false .cont .icon {background: #FF6666;}
+
+.cont .icon {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 50px 50px 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.cont .lico {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px 0 0 20px;
+    color: #fff;
+    background: rgb(200, 200, 200);
+    z-index: 10;
+}
+
+.percent-div p {
+    position: absolute;
+    top: -20px;
+    left: 15px;
+    font-size: 30px;
+}
+
+.cont input {
+    position: absolute;
+    right: 50px;
+    width: calc(100% - 100px);
+    height: 50px;
+    z-index: 1;
+    text-align: center;
+    font-size: 100%;
+    border: 0;
+    outline: none;
+    padding: 0;
+}
+
+[floor-true="1"] {
+    top: 0px;
+}
+
+[floor-true="2"] {
+    top: 100px;
+}
+
+[floor-true="3"] {
+    top: 190px;
+}
+
+[floor-true="4"] {
+    top: 280px;
+}
+
+[floor-false="0"] {
+    top: -300px;
+}
+
+[floor-false="1"] {
+    top: -210px;
+}
+
+[floor-false="2"] {
+    top: -120px;
+}
+
+[floor-false="3"] {
+    top: -30px;
+}
+
+[button-floor="1"] {
+    top: 10%;
+}
+
+[button-floor="2"] {
+    top: 27%;
+}
+
+[button-floor="3"] {
+    top: 45%;
+}
+
+[button-floor="4"] {
+    top: 63%;
+}
+
+[button-floor="5"] {
+    top: 80%;
+}
+
+
+input:disabled {
+    background: #dddddd;
+    color: white;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 500px) {
+    .cont input {
+        font-size: 150%;
+    }
+}
+
+@media (min-width: 780px) {
+    .cont input {
+        right: 5%;
+        width: 90%;
+    }
+}

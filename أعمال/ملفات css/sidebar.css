@@ -1,0 +1,231 @@
+.sidebar {
+    display: flex;
+    flex-flow: column wrap;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-top: 134px;
+    background-color: rgb(247 246 243);
+    width: var(--side-width);
+    height: 100%;
+    transition: 0.2s width;
+}
+
+.sidebar.hide * {
+    opacity: 0!important;
+    width: 0!important;
+}
+
+.sidebar .page, .sidebar .add-page {
+    flex: 0 0 27px;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 27px;
+    margin: 0;
+}
+
+.sidebar button {
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.sidebar .page.active {
+    background-color: rgb(55 53 47 / 8%);
+}
+
+.sidebar .page.dragging {
+    opacity: 0.5;
+}
+
+.sidebar .page:active {
+    background-color: rgb(203, 202, 199)!important;
+}
+
+.sidebar .page:hover, .sidebar .add-page:hover {
+    background-color: rgb(55 53 47 / 8%);
+}
+
+.sidebar .page.active:hover {
+    background-color: rgba(55, 53, 47, 15%);
+}
+
+.sidebar .page .page-box, .sidebar .page .name {
+    position: absolute;
+}
+
+.sidebar .page-box {
+    display: inline-block;
+    top: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+.sidebar .page-box:hover {
+    background-color: rgb(55 53 47 / 10%);
+}
+
+.sidebar .page-box * {
+    position: absolute;
+}
+
+.sidebar .page-box img {
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    border-radius: 6px;
+}
+
+.sidebar .page label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sidebar .page .toggle-btn {
+    right: 15px;
+}
+
+.sidebar .page .toggle {
+    width: 8px;
+    height: 11px;
+    top: calc(50% - 4px);
+    right: calc(50% - 3.5px);
+    clip-path: polygon(100% 0%, 0% 45%, 100% 90%);
+    background-color: rgb(55 53 47 / 45%);
+}
+
+.sidebar .page .icon-btn {
+    right: 37px;
+}
+
+.sidebar .page .name {
+    top: calc(50% - 9.25px);
+    right: 59px;
+    cursor: pointer;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.sidebar .page.active .name {
+    color: rgb(25 23 17 / 90%);
+}
+
+.sidebar .add, .sidebar .more {
+    display: none;
+}
+
+.sidebar .add img, .sidebar .more .img {
+    border-radius: 0;
+}
+
+.sidebar .add {
+    left: 14px;
+}
+
+.sidebar .more {
+    left: 40px;
+}
+
+.sidebar .more img {
+    top: calc(50% - 8px);
+    right: calc(50% - 8px);
+    width: 16px;
+    height: 16px;
+}
+
+.sidebar .add-page * {
+    position: absolute;
+}
+
+.sidebar .add-page img {
+    bottom: 7px;
+    right: 18px;
+    width: 14px;
+}
+
+.sidebar .add-page h1 {
+    display: inline-block;
+    font-size: 14px;
+    right: 42px;
+    bottom: 5px;
+    color: rgb(102, 102, 102);
+    margin: 0;
+    width: fit-content;
+    text-align: right;
+}
+
+.sidebar .page:hover .add, .sidebar .page:hover .more {
+    display: inline-block;
+}
+
+.sidebar .add-down {
+    position: absolute;
+    bottom: 130px;
+    right: 0;
+    flex: 0 1 auto;
+    width: 100%;
+    height: 49px;
+    border-top: 1px solid rgb(230 229 225);
+    padding: 0;
+    overflow: hidden;
+}
+
+.sidebar .add-down * {
+    position: absolute;
+    margin: 0;
+}
+
+.sidebar .add-down h1 {
+    left: auto;
+    right: 40px;
+    font-size: 16px;
+    top: 8px;
+    width: 85.91px;
+}
+
+.sidebar .add-down img {
+    left: auto;
+    right: 15px;
+    top: 13px;
+}
+
+.sidebar .pages {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    height: calc(100% - 148px - 49px - 14px - 20px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 14px;
+    padding-bottom: 20px;
+}
+
+.sidebar .show-hide {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 11px;
+    left: 12px;
+    cursor: pointer;
+}
+
+.sidebar .show-hide img {
+    width: 13px;
+    height: 13px;
+    top: calc(50% - 6.5px);
+    right: calc(50% - 6.5px);
+    border-radius: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.sidebar:hover .show-hide img {
+    opacity: 1;
+}
