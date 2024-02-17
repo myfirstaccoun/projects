@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قطع غيار</title>
+</head>
+<body>
+    <table dir="rtl">
+        <tr>
+            <th>العنوان</th>
+            <th>الإسم</th>
+            <th>الرقم</th>
+            <th style="border-left: 0;">+</th>
+        </tr>
+        <tr>
+            <td>ا</td>
+            <td>يوسف</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>ب</td>
+            <td>حسام الدين</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>ت</td>
+            <td>أنس</td>
+            <td>3</td>
+        </tr>
+    </table>
+</body>
+<style>
+    table {
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        border-collapse: collapse;
+        border-radius: 15px;
+        border-right: 0!important;
+        border-left: 0!important;
+    }
+    
+    table, th, td {
+        border: 1px solid;
+    }
+
+    table tr th:nth-child(1), table tr td:nth-child(1) {
+        border-right: 0;
+    }
+
+    table td {
+        text-align: center;
+        color: #000;
+        font-weight: bold;
+        /* user-select: none; */
+        transition: all 0.2s;
+    }
+</style>
+</html>

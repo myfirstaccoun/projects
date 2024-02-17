@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شارك</title>
+</head>
+<body>
+    <textarea type="text"></textarea>
+    <button>شارك</button>
+</body>
+<script>
+    let inpt = document.querySelector("textarea");
+
+    document.querySelector("button").onclick = () => {
+        if(inpt.value != "") {
+            console.log(inpt.value);
+            // window.open("https://web.facebook.com/dialog/share?app_id=87741124305&href=" + encodeURIComponent(inpt.value) + "%26feature%3Dshare&display=popup&_rdc=1&_rdr", "_blank");
+            window.open("https://www.facebook.com/share.php?u=" + encodeURIComponent(inpt.value), "_blank");
+            // window.open("https://web.facebook.com/dialog/share?app_id=87741124305&href=https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D" + inpt.value + "&title=hello" + "%26feature%3Dshare&display=popup&_rdc=1&_rdr", "_blank", "");
+        }
+    }
+</script>
+</html>
